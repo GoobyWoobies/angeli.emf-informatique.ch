@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Accueil - Mes Exercices JavaScript</title>
+    <link href="./loader.css" rel="stylesheet">
+    <link href="./dist/styles.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/tailwindcss-intersect@1.x.x/dist/observer.min.js"></script>
+    <script src="./javascript.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .hollow-text {
+            color: transparent;
+            -webkit-text-stroke: 2px #4b7eff;
+
+        }
+        .hover-3d:hover {
+            color: #ffffff;
+            text-shadow: 2px 2px 0 #4b7eff, 4px 4px 0 #4b7eff, 6px 6px 0 #4b7eff;
+            transform: translateY(-4px);
+        }
+
+         body {
+             cursor: url('./img/arrow.cur'), auto; /* Custom cursor file */
+         }
+        .blue-dot {
+            width: 24px;
+            height: 24px;
+            background-color: #3b82f6; /* Blue color */
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none; /* Prevent interference with other elements */
+            transform: translate(-50%, -50%);
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) translate(-50%, -50%);
+            }
+            50% {
+                transform: scale(1.5) translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+<header class="sticky top-0 z-50">
+    <nav class="py-2 text-white bg-gray-800/50 shadow-md h-max bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="ml-12 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ILLAN ANGEL</span>
+            </a>
+            <div class="hidden md:block -mr-96" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">HOME</a>
+                    </li>
+                    <li>
+                        <a href="../home/101/101/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PROJET 101</a>
+                    </li>
+                    <li>
+                        <a href="../home/307/projet/src/indexProjet.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PROJET 307</a>
+                    </li>
+                    <li>
+                        <a href="./307/redirect/redirect.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">EXERCICE 307</a>
+                    </li>
+                    <li>
+                        <a href="../home/portfolio/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PORTFOLIO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<body class="bg-gray-900 bg-scroll z-50 h-lvh">
+<!-- Contenu HTML superposé -->
+<div class="mt-32 flex flex-col items-center justify-center">
+    <!-- Titre de bienvenue -->
+
+    <h1 class="animate-fade-left animate-once animate-duration-[2000ms] animate-delay-500 animate-ease-in-out animate-normal animate-fill-both z-1 text-6xl md:text-8xl font-extrabold hollow-text hover-3d transition-all duration-500 ease-in-out">
+        L'UNIVERS DE ANGEL
+    </h1>
+
+    <!-- -->
+    <p class="animate-fade-left animate-once animate-duration-[2000ms] animate-delay-500 animate-ease-in-out animate-normal animate-fill-both mt-32 text-3xl max-w-6xl font-medium tracking-tight text-center">
+        <a class="relative text-slate-700 inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 hover:text-slate-100 before:hover:bg-blue-800 ">
+            <span class="relative skew-y-3">Bienvenue, je m'appelle Illan Angel je suis étudiant à l'écoles des métiers de Fribourg, si vous voulez en savoir plus sur moi, hésiter à visitez ma page personnel avec le bouton ci-dessous.
+                </span>
+        </a>
+    </p>
+    <!-- component -->
+    <a href="../home/portfolio/index.html"
+       class="relative mt-24 text-3xl text-slate-400 inline-flex items-center justify-center leading-normal
+       no-underline pb-1 font-sans font-bold uppercase
+       hover:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset
+       focus:ring-neutral-100 transition group animate-fade-left animate-once animate-duration-[2000ms] animate-delay-500 animate-ease-in-out animate-normal animate-fill-both">EN SAVOIR PLUS
+        <svg
+                class="icon icon-tabler icon-tabler-arrow-up-right pl-2"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M17 7l-10 10"></path><path d="M8 7l9 0l0 9"></path>
+        </svg>
+        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-100 origin-bottom-right
+        transform transition duration-200 ease-out scale-x-0 group-hover:scale-x-100 group-hover:origin-bottom-left">
+        </span>
+    </a>
+
+</div>
+
+<div class="mt-32 flex flex-col items-center justify-center">
+    <!-- Titre de bienvenue -->
+
+    <h1 class="animate-fade-left animate-once animate-duration-[2000ms] animate-delay-500 animate-ease-in-out animate-normal animate-fill-both z-1 text-4xl md:text-8xl font-extrabold hollow-text hover-3d transition-all duration-500 ease-in-out">
+        MODULE 101
+    </h1>
+    <!-- -->
+    <p class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700 mt-32 text-3xl max-w-6xl font-medium tracking-tight text-center">
+        <a class="relative text-slate-700 inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 hover:text-slate-100 before:hover:bg-blue-800 ">
+            <span class="relative skew-y-3">Durant ma première années, j'ai du travailler sur un projet qui nous demander de maitrisé les base du Frontedn (HTML et CSS).
+                </span>
+        </a>
+    </p>
+    <!-- component -->
+    <a href="../home/101/101/index.html"
+       class="relative mt-24 text-3xl text-slate-400 inline-flex items-center justify-center leading-normal
+       no-underline pb-1 font-sans font-bold uppercase
+       hover:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset
+       focus:ring-neutral-100 group scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700">VOIR LE PROJET
+        <svg
+                class="icon icon-tabler icon-tabler-arrow-up-right pl-2"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17 7l-10 10"></path><path d="M8 7l9 0l0 9"></path>
+        </svg>
+        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-100 origin-bottom-right
+        transform transition duration-200 ease-out scale-x-0 group-hover:scale-x-100 group-hover:origin-bottom-left">
+        </span>
+    </a>
+</div>
+
+<div class="mt-32 flex flex-col items-center justify-center">
+    <!-- Titre de bienvenue -->
+
+    <h1 class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700 z-1 text-4xl md:text-8xl font-extrabold hollow-text hover-3d transition-all duration-500 ease-in-out">
+        MODULE 307
+    </h1>
+    <!-- -->
+    <p class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700 mt-32 text-3xl max-w-6xl font-medium tracking-tight text-center">
+        <a class="relative text-slate-700 inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 hover:text-slate-100 before:hover:bg-blue-800 ">
+            <span class="relative skew-y-3">Durant ma deuxieme années, j'ai du travailler sur un projet qui nous demander de maitrisé les base du JavaScript.
+                </span>
+        </a>
+    </p>
+    <!-- component -->
+    <a href="../home/101/101/index.html"
+       class="relative mt-24 text-3xl text-slate-400 inline-flex items-center justify-center leading-normal
+       no-underline pb-1 font-sans font-bold uppercase
+       hover:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset
+       focus:ring-neutral-100 group scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700">VOIR LE PROJET
+        <svg
+                class="icon icon-tabler icon-tabler-arrow-up-right pl-2"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17 7l-10 10"></path><path d="M8 7l9 0l0 9"></path>
+        </svg>
+        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-100 origin-bottom-right
+        transform transition duration-200 ease-out scale-x-0 group-hover:scale-x-100 group-hover:origin-bottom-left">
+        </span>
+    </a>
+</div>
+
+</body>
+
+<footer class="flex flex-col space-y-10 justify-center m-10 mt-48 pb-12">
+
+    <nav class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700 flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
+        <a class="hover:text-gray-100" href="#">HOME</a>
+        <a class="hover:text-gray-100" href="../home/307/projet/src/indexProjet.html">PROJET 307</a>
+        <a class="hover:text-gray-100" href="./307/redirect/redirect.html">EXERCICE 307</a>
+        <a class="hover:text-gray-100" href="../home/portfolio/index.html">PORTFOLIO</a>
+    </nav>
+
+    <div class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700 flex justify-center space-x-5">
+        <a href="https://github.com/TerrorIllan" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/30/000000/github.png" />
+        </a>
+        <a href="https://www.linkedin.com/in/illan-angel-0a12652a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+        </a>
+        <a href="https://instagram.com/22h22.illnn" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+        </a>
+        <a href="https://open.spotify.com/user/n4r07mj7dmwbgkdcips3mon8b?si=mBSjKawvRPWPCNerRv68pA" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/30/000000/spotify" />
+        </a>
+
+    </div>
+    <p class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700 text-center text-gray-600 font-medium">&copy; 2024 Company Ltd. All rights reservered. by Angel Illan</p>
+</footer>
+
+</html>
